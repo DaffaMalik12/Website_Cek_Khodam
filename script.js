@@ -8,6 +8,7 @@ document.getElementById("CheckButton").addEventListener("click", function () {
   } else {
     // Menampilkan modal dan loading animasi
     document.getElementById("modalContent").innerHTML = `
+    <h3 class="text-lg font-bold">Hasil Khodam Anda:</h3>
       <div class="flex justify-center items-center">
         <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
         <p class="ml-4">Sedang memproses...</p>
@@ -18,7 +19,7 @@ document.getElementById("CheckButton").addEventListener("click", function () {
     setTimeout(() => {
       const result = checkKhodam(name);
       document.getElementById("modalContent").innerText = result; // Isi modal dengan hasil
-    }, 1500); // Waktu tunggu 2 detik
+    }, 1500); // Waktu tunggu 1,5 detik
   }
 });
 
