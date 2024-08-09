@@ -1,7 +1,10 @@
 document.getElementById("CheckButton").addEventListener("click", function () {
   const name = document.getElementById("name").value.trim(); // Menghapus spasi di awal dan akhir
   if (name === "") {
-    alert("Harap masukkan nama Anda");
+    document.getElementById("modalContent").innerHTML = `
+      <div class="flex justify-center items-center">
+        <p class="ml-4">Harap Masukkan Nama Anda</p>
+      </div>`;
   } else {
     // Menampilkan modal dan loading animasi
     document.getElementById("modalContent").innerHTML = `
