@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cek Khodam</title>
+  </head>
+  <body
+    class="bg-[url('_8501c6f2-38d3-42e5-8afa-df9a59d17a3b.jpeg')] bg-no-repeat bg-cover bg-center min-h-screen w-full"
+  >
+    <!-- Card -->
+    <div class="flex justify-center items-center min-h-screen">
+      <div
+        class="card w-96 shadow-xl items-center backdrop-blur-sm bg-white/30"
+      >
+        <div class="card-body items-center text-center">
+          <img src="ghost_icon_125833.png" alt="" class="w-40" />
+          <h1 class="text-2xl text-black font-bold font-mono">
+            Cek Khodam Anda 👻
+          </h1>
+          <label for="name" class="text-sm text-black"
+            >Masukkan Nama Anda:</label
+          >
+          <input
+            id="name"
+            type="text"
+            placeholder="Masukkan Nama Anda"
+            class="input input-bordered w-96 max-w-xs bg-white border border-slate-600 text-black"
+          />
+          <div class="card-actions">
+            <button
+              class="btn text-white"
+              id="CheckButton"
+              onclick="my_modal_2.showModal()"
+            >
+              Cek Khodam
+            </button>
+          </div>
+          <dialog id="my_modal_2" class="modal">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Hasil Khodam Anda:</h3>
+              <p id="modalContent" class="py-4"></p>
+              <!-- Ini adalah tempat hasil akan ditampilkan -->
+            </div>
+            <form method="dialog" class="modal-backdrop">
+              <button>Close</button>
+            </form>
+          </dialog>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
